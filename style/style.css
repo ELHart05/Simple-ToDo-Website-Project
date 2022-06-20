@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --darker: #1F2937;
+    --grey: #6B7280;
+    --pink: #EC4899;
+    --purple: #8B5CF6;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: var(--darker)
+}
+
+header {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 55px;
+    color: var(--grey);
+    text-align: center;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+.tasks-title {
+    position: relative;
+    top: 10px;
+    color: var(--grey);
+    font-size: 38px;
+    text-align: center;
+}
+
+.input-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.submit-input,
+.adittion-input {
+    outline: none;
+    width: 65%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    transition: 2s;
+    border: transparent;
+}
+
+.crossed-input {
+    text-decoration: line-through;
+}
+
+
+.submit-btn,
+.edit,
+.delete {
+    background-image: linear-gradient(to left, var(--pink), var(--purple));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    border: transparent;
+    font-size: 20px;
+    margin-left: 8px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.delete {
+    background-image: none;
+    -webkit-background-clip: unset;
+    background-color: transparent;
+    -webkit-text-fill-color: red;
+}
+
+.dark-btn {
+    background-image: none;
+    -webkit-background-clip: unset;
+    background-color: transparent;
+    -webkit-text-fill-color: black;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.checked {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.checked-style {
+    background-color: black;
+}
+
+.container>div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+@media screen and (max-width:385px) {
+    .checked {
+        height: 20px;
+        width: 20px;
+    }
+}

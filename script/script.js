@@ -3,13 +3,10 @@ const input = document.querySelector(".submit-input"),
     container = document.querySelector(".container");
 
 
-submit_btn.addEventListener("click", function () {
+function insertNewElement() {
 
     if (input.value) {
         let mainDiv = document.createElement("div"),
-            checkedDiv = Object.assign(document.createElement("div"), {
-                classList: "checked"
-            }),
             addedInput = Object.assign(document.createElement("input"), {
                 type: "text",
                 value: input.value,
@@ -25,18 +22,11 @@ submit_btn.addEventListener("click", function () {
                 textContent: "DELETE"
             });
 
-        mainDiv.append(checkedDiv, addedInput, editBtn, deleteBtn);
+        mainDiv.append(addedInput, editBtn, deleteBtn);
         container.appendChild(mainDiv);
 
         deleteBtn.addEventListener("click", function () {
             mainDiv.remove();
-        })
-
-        checkedDiv.addEventListener("click", function () {
-            checkedDiv.classList.toggle("checked-style");
-            addedInput.classList.toggle("crossed-input");
-            deleteBtn.classList.toggle("dark-btn");
-            editBtn.classList.toggle("dark-btn");
         })
 
         editBtn.addEventListener("click", function () {
@@ -51,5 +41,12 @@ submit_btn.addEventListener("click", function () {
         })
 
         input.value = '';
+    }
+}
+
+submit_btn.addEventListener("click", insertNewElement());
+window.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        insertNewElement();
     }
 })

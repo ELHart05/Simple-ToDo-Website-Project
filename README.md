@@ -1,6 +1,6 @@
 # Simple ToDo Website Project
 
-![_C__Users_okbaa_Desktop_TO%20DO%20LIST%20Project_index html](https://user-images.githubusercontent.com/96151694/174655794-c54660ee-c03b-4397-b8db-c48037833b7b.png)
+![_C__Users_okbaa_Desktop_HTML%20CSS%20JS_TO%20DO%20LIST%20Project_index html](https://user-images.githubusercontent.com/96151694/175774796-6a1d92d8-d752-4f23-a76d-48280e36c898.png)
 
 ToDo Task Page Using Pure HTML CSS And JavaScript ...
 

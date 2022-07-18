@@ -44,7 +44,7 @@ function insertNewElement() {
     }
 }
 
-submit_btn.addEventListener("click", insertNewElement());
+submit_btn.addEventListener("click", insertNewElement);
 window.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
         insertNewElement();
